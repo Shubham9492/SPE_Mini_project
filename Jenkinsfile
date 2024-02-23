@@ -48,8 +48,8 @@ pipeline {
             steps {
                 script {
                     ansiblePlaybook(
-                    //colorized: true,
-                    //installation: 'ansible',
+                    colorized: true,
+                    installation: 'ansible',
                     playbook: 'deploy.yml',
                     inventory: 'inventory.ini'
                     )
