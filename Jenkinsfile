@@ -51,7 +51,7 @@ pipeline {
                     colorized: true,
                     installation: 'ansible',
                     playbook: 'deploy.yml',
-                    inventory: 'inventory'
+                    inventory: 'inventory.ini'
                     )
                 }
             }
