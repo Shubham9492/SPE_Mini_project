@@ -37,7 +37,7 @@ pipeline {
         	   script{
         	   docker.withRegistry('','caldocker'){
         	   	sh 'docker tag spe_minipro_cal Shubham9492/spe_minipro_cal:latest'
-        	   	sh 'docker push Shubham9492/spe_minipro_cal
+        	   	sh 'docker push Shubham9492/spe_minipro_cal'
         	     }
         	   }
         	
