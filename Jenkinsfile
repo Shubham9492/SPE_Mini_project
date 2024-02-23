@@ -25,6 +25,24 @@ pipeline {
                 sh "./test.py"
             }
         }
+        stage('Create Docker Image'){
+                steps{
+                    script{
+                    docker.build("${DOCKER_IMAGE_NAME}", '.')
+                    }
+                }
+     }
+        stage('Docker Image Pushed'){
+        	steps{
+        	   script{
+        	   docker.withRegistry('','caldocker'){
+        	   	sh 'docker tag spe_minipro_cal Shubham9492/spe_minipro_cal:latest'
+        	   	sh 'docker push Shubham9492/spe_minipro_cal
+        	     }
+        	   }
+        	
+            }
+        }
     } 
     
 }
