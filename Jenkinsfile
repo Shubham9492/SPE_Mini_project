@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Git') {
             steps {
-                echo "hello World 1"
+                echo "hello World 123"
             }
         }
         stage('Build Code') {
